@@ -1,0 +1,89 @@
+body{
+  background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(0, 0, 0));
+}
+
+.game-board
+{
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+  /* border: 6px solid #0a472d; */
+  
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+h1{
+    text-align: center;
+    font-size: 3.5em;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+    text-shadow: 3px 1px 2px #ea00ff;
+
+  }
+h2{
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 3px 1px 3px #ea00ff;
+}
+.box{
+  border: 3px solid #ea00ff;
+  
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset{
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.4em;
+  border: 0px;
+  border-radius: 10px;
+  font-weight: 600;
+  border : 2px solid rgb(255, 0, 251);
+  box-shadow: 1px 1px 30px rgb(255, 0, 251);
+  
+}
+footer{ 
+  width: 100px;
+  margin: auto;
+  position: relative;
+  top: 50px;
+}
+
+/* Fixed sidenav, full height */
+details > summary {
+  display: inline-block;
+  padding: 4px;
+  width: 100px;
+  background-color: #eeeeee;
+  border: none;
+  box-shadow: 1px 1px 15px #000000;
+  cursor: pointer;
+}
+
+details > p {
+  width: 400px;
+  background-color: #eeeeee;
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 15px black ;
+}
+#o,#th,#t{
+  border-top: none;
+}
+#s,#e,#n{
+  border-bottom: none;
+}
+#o,#f,#s{
+  border-left: none;
+}
+#th,#si,#n{
+  border-right: none;
+}
