@@ -22,76 +22,76 @@ divElement.addEventListener("click", function (event) {
   if(document.querySelector("#o").innerHTML === "X" && document.querySelector("#t").innerHTML === "X" && document.querySelector("#th").innerHTML === "X"){
     document.querySelector("h1").innerHTML = "X wins!";
     count = 9;
-    var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    var audio = new Audio("success.mp3");
         audio.play();
   }
   else if(document.querySelector("#f").innerHTML === "X" && document.querySelector("#fi").innerHTML === "X" && document.querySelector("#si").innerHTML === "X"){
     document.querySelector("h1").innerHTML = "X wins!";count = 9;
-    var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    var audio = new Audio("success.mp3");
         audio.play();
   }
   else if(document.querySelector("#s").innerHTML === "X" && document.querySelector("#e").innerHTML === "X" && document.querySelector("#n").innerHTML === "X"){
     document.querySelector("h1").innerHTML = "X wins!";count = 9;
-    var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    var audio = new Audio("success.mp3");
         audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "X" && document.querySelector("#f").innerHTML === "X" && document.querySelector("#s").innerHTML === "X"){
     document.querySelector("h1").innerHTML = "X wins!";count = 9;
-    var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    var audio = new Audio("success.mp3");
         audio.play();
   }
   else if(document.querySelector("#t").innerHTML === "X" && document.querySelector("#fi").innerHTML === "X" && document.querySelector("#e").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#th").innerHTML === "X" && document.querySelector("#si").innerHTML === "X" && document.querySelector("#n").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "X" && document.querySelector("#fi").innerHTML === "X" && document.querySelector("#n").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#th").innerHTML === "X" && document.querySelector("#fi").innerHTML === "X" && document.querySelector("#s").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "O" && document.querySelector("#t").innerHTML === "O" && document.querySelector("#th").innerHTML === "O"){
     document.querySelector("h1").innerHTML = "O wins!";
-    count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#f").innerHTML === "O" && document.querySelector("#fi").innerHTML === "O" && document.querySelector("#si").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#s").innerHTML === "O" && document.querySelector("#e").innerHTML === "O" && document.querySelector("#n").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "O" && document.querySelector("#f").innerHTML === "O" && document.querySelector("#s").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#t").innerHTML === "O" && document.querySelector("#fi").innerHTML === "O" && document.querySelector("#e").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#th").innerHTML === "O" && document.querySelector("#si").innerHTML === "O" && document.querySelector("#n").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "O" && document.querySelector("#fi").innerHTML === "O" && document.querySelector("#n").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#th").innerHTML === "O" && document.querySelector("#fi").innerHTML === "O" && document.querySelector("#s").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("mario-coin-200bpm-82548.mp3");
+    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(count == 9){
     document.querySelector("h1").innerHTML = "Draw!";
-    var audio = new Audio("drawsound.mp3");
+    var audio = new Audio("draw.mp3");
     audio.play();
     
   }
