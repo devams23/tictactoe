@@ -48,6 +48,7 @@ h2{
   font-weight: 600;
   border : 2px solid rgb(255, 0, 251);
   box-shadow: 1px 1px 30px rgb(255, 0, 251);
+  cursor: pointer;
   
 }
 footer{ 
