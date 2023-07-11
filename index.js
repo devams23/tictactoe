@@ -1,31 +1,54 @@
+
 var divElement = document.querySelector(".game-board");
 var n1 = prompt("Enter the Player1 name:");
 var n2 = prompt("Enter the Player2 name:");
-document.querySelector("h2").innerHTML = n1 +"'"+"s"+" Turn"
-count = 1
+count = 1;
+document.querySelector("h1").innerHTML = "Tic-Tac-Toe";
+document.querySelector("h2").innerHTML = n1 +"'"+"s"+" Turn" + "(X)";
+
+function thestart(){
+  
+  for (var i = 0; i<9 ; i++){
+    document.querySelectorAll(".box")[i].innerHTML = "";
+  }
+
+  // console.log(divElement.querySelectorAll(".box")[i].innerHTML ="");
+  // for (var i = 0 ; i<9 ; i++)
+  document.querySelector("h1").innerHTML = "Tic-Tac-Toe";
+  document.querySelector("h2").innerHTML = n1 +"'"+"s" + " Turn " + "(X)";
+  count = 1;
+  console.log("play again");
+
+}
+
+  
 divElement.addEventListener("click", function (event) {
   var clickedId = event.target.id;
-  
   if (count % 2 == 0  && count <=9){
-    put(clickedId, "O");
-    document.querySelector("h2").innerHTML = n1 +"'"+"s"+" Turn";
+     document.querySelector("h2").innerHTML = n1 + "'" + "s" + " Turn " + "(X)";
+     put(clickedId, "O");
+
+   
+
   }
   else 
   {
     if(count <=9)
     {
+      document.querySelector("h2").innerHTML = n2 + "'" + "s" + " Turn " + "(O)";
       put(clickedId, "X");
-      document.querySelector("h2").innerHTML = n2 +"'"+"s"+" Turn";
+      
     }
-  }
 
-  
-   
+  }
   if(document.querySelector("#o").innerHTML === "X" && document.querySelector("#t").innerHTML === "X" && document.querySelector("#th").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = n1 + " wins!";
-    count = 9;
-    var audio = new Audio("success.mp3");
-        audio.play();
+      document.querySelector("h1").innerHTML = n1 + " wins!";
+      count = 9;
+      
+      var audio = new Audio("success.mp3");
+      audio.play();
+
+    
   }
   else if(document.querySelector("#f").innerHTML === "X" && document.querySelector("#fi").innerHTML === "X" && document.querySelector("#si").innerHTML === "X"){
     document.querySelector("h1").innerHTML = n1 + " wins!";count = 9;
@@ -97,9 +120,10 @@ divElement.addEventListener("click", function (event) {
     audio.play();
     
   }
-  
+  console.log(count);
   count = count + 1;
   console.log(clickedId);
+  
   }
   );
 
@@ -145,3 +169,4 @@ function  put(clickedId, st){
             break;
 }
 }
+
