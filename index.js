@@ -1,92 +1,94 @@
 var divElement = document.querySelector(".game-board");
-
+var n1 = prompt("Enter the Player1 name:");
+var n2 = prompt("Enter the Player2 name:");
+document.querySelector("h2").innerHTML = n1 +"'"+"s"+" Turn"
 count = 1
 divElement.addEventListener("click", function (event) {
   var clickedId = event.target.id;
-
+  
   if (count % 2 == 0  && count <=9){
     put(clickedId, "O");
-    document.querySelector("h2").innerHTML = "X Turn"
+    document.querySelector("h2").innerHTML = n1 +"'"+"s"+" Turn";
   }
   else 
   {
     if(count <=9)
     {
       put(clickedId, "X");
-      document.querySelector("h2").innerHTML = "O Turn"
+      document.querySelector("h2").innerHTML = n2 +"'"+"s"+" Turn";
     }
   }
 
   
    
   if(document.querySelector("#o").innerHTML === "X" && document.querySelector("#t").innerHTML === "X" && document.querySelector("#th").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";
+    document.querySelector("h1").innerHTML = n1 + " wins!";
     count = 9;
     var audio = new Audio("success.mp3");
         audio.play();
   }
   else if(document.querySelector("#f").innerHTML === "X" && document.querySelector("#fi").innerHTML === "X" && document.querySelector("#si").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;
+    document.querySelector("h1").innerHTML = n1 + " wins!";count = 9;
     var audio = new Audio("success.mp3");
         audio.play();
   }
   else if(document.querySelector("#s").innerHTML === "X" && document.querySelector("#e").innerHTML === "X" && document.querySelector("#n").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;
+    document.querySelector("h1").innerHTML = n1 + " wins!";count = 9;
     var audio = new Audio("success.mp3");
         audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "X" && document.querySelector("#f").innerHTML === "X" && document.querySelector("#s").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;
+    document.querySelector("h1").innerHTML = n1 + " wins!";count = 9;
     var audio = new Audio("success.mp3");
         audio.play();
   }
   else if(document.querySelector("#t").innerHTML === "X" && document.querySelector("#fi").innerHTML === "X" && document.querySelector("#e").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n1 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#th").innerHTML === "X" && document.querySelector("#si").innerHTML === "X" && document.querySelector("#n").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n1 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "X" && document.querySelector("#fi").innerHTML === "X" && document.querySelector("#n").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n1 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#th").innerHTML === "X" && document.querySelector("#fi").innerHTML === "X" && document.querySelector("#s").innerHTML === "X"){
-    document.querySelector("h1").innerHTML = "X wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n1 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "O" && document.querySelector("#t").innerHTML === "O" && document.querySelector("#th").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";
+    document.querySelector("h1").innerHTML = n2 + " wins!";
     count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#f").innerHTML === "O" && document.querySelector("#fi").innerHTML === "O" && document.querySelector("#si").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n2 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#s").innerHTML === "O" && document.querySelector("#e").innerHTML === "O" && document.querySelector("#n").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n2 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "O" && document.querySelector("#f").innerHTML === "O" && document.querySelector("#s").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n2 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#t").innerHTML === "O" && document.querySelector("#fi").innerHTML === "O" && document.querySelector("#e").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n2 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#th").innerHTML === "O" && document.querySelector("#si").innerHTML === "O" && document.querySelector("#n").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n2 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#o").innerHTML === "O" && document.querySelector("#fi").innerHTML === "O" && document.querySelector("#n").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n2 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(document.querySelector("#th").innerHTML === "O" && document.querySelector("#fi").innerHTML === "O" && document.querySelector("#s").innerHTML === "O"){
-    document.querySelector("h1").innerHTML = "O wins!";count = 9;var audio = new Audio("success.mp3");
+    document.querySelector("h1").innerHTML = n2 + " wins!";count = 9;var audio = new Audio("success.mp3");
     audio.play();
   }
   else if(count == 9){
@@ -107,7 +109,7 @@ divElement.addEventListener("click", function (event) {
 
 function  put(clickedId, st){
   // if(document.querySelector("#o").innerHTML == document.querySelector("#t").innerHTML==document.querySelector("#th").innerHTML == "X"){
-  //   document.querySelector("h1").innerHTML = "X wins!";
+  //   document.querySelector("h1").innerHTML = n1 + " wins!";
 
     switch (clickedId) {
         case "o":
