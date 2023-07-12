@@ -27,6 +27,8 @@ h1{
 h2{
   text-align: center;
   color: #ffffff;
+  text-shadow: 3px 1px 2px #00cbe6;
+  font-size: 35px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  
 }
