@@ -1,11 +1,17 @@
 
+var n1 = localStorage.getItem("player1");
+var n2 = localStorage.getItem("player2");
 var divElement = document.querySelector(".game-board");
-var n1 = prompt("Enter the Player1 name:");
-var n2 = prompt("Enter the Player2 name:");
-count = 1;
-document.querySelector("h1").innerHTML = "Tic-Tac-Toe";
-document.querySelector("h2").innerHTML = n1 +"'"+"s"+" Turn" + "(X)";
+// Display player names in the game
+var playerNamesElement = document.getElementById("playerNames");
+// playerNamesElement.innerHTML = "Player 1: " + player1Name + "<br>Player 2: " + player2Name;
+// Use player names in your tic-tac-toe game logic
+console.log("Player 1 Name:", n1);
+console.log("Player 2 Name:", n2);
 
+document.querySelector("h1").innerHTML = "Tic-Tac-Toe";
+document.querySelector("h2").innerHTML = n1 +"'"+"s"+" Turn " + "( X )";
+count =1
 function thestart(){
   
   for (var i = 0; i<9 ; i++){
@@ -15,7 +21,7 @@ function thestart(){
   // console.log(divElement.querySelectorAll(".box")[i].innerHTML ="");
   // for (var i = 0 ; i<9 ; i++)
   document.querySelector("h1").innerHTML = "Tic-Tac-Toe";
-  document.querySelector("h2").innerHTML = n1 +"'"+"s" + " Turn " + "(X)";
+  document.querySelector("h2").innerHTML = n1 +"'"+"s" + " Turn " + "( X )";
   count = 1;
   console.log("play again");
 
@@ -25,7 +31,7 @@ function thestart(){
 divElement.addEventListener("click", function (event) {
   var clickedId = event.target.id;
   if (count % 2 == 0  && count <=9){
-     document.querySelector("h2").innerHTML = n1 + "'" + "s" + " Turn " + "(X)";
+     document.querySelector("h2").innerHTML = n1 + "'" + "s" + " Turn " + "( X )";
      put(clickedId, "O");
 
    
@@ -35,7 +41,7 @@ divElement.addEventListener("click", function (event) {
   {
     if(count <=9)
     {
-      document.querySelector("h2").innerHTML = n2 + "'" + "s" + " Turn " + "(O)";
+      document.querySelector("h2").innerHTML = n2 + "'" + "s" + " Turn " + "( O )";
       put(clickedId, "X");
       
     }
