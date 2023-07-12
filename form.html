@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  
+  <style>
+
+
+body {
+  background-image: linear-gradient(to right, rgb(15, 56, 67), rgb(28, 6, 91),rgb(54, 20, 62));
+  font-family: Arial, sans-serif;
+}
+
+.form-container {
+  max-width: 250px;
+  position: relative;
+  top: 20vh;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+  
+}
+
+
+
+h2 {
+  position: relative;
+  bottom: 20px;
+  font-family: monospace;
+  font-size: 2.5em;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(238, 130, 238, 0.5);
+  animation: neon-flicker 1s infinite;
+  
+}
+
+@keyframes neon-flicker {
+  0% {
+    text-shadow: 0 0 10px rgba(238, 130, 238, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(238, 130, 238, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(238, 130, 238, 0.5);
+  }
+}
+
+form {
+
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-family: monospace;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.5em;
+  
+}
+
+input[type="text"] {
+  font-size: 1.4em;
+  font-family: monospace;
+  padding: 12px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: rgba(87, 87, 87, 0.2);
+  color: #ffffff;
+  border: 1px solid rgb(255, 0, 217);
+}
+input[type = "text"]:focus{
+  outline: none;
+  box-shadow: 1px 1px 20px rgb(255, 0, 217) ;
+}
+::placeholder{
+  color: rgb(202, 202, 202);
+
+
+}
+input[type="submit"] {
+  width: 100px;
+  margin: auto;
+  font-size: 1em;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(232, 38, 232, 0.8);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  animation: neon-pulse 1s ease-in-out infinite alternate;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(255, 0, 255);
+  color: black;
+}
+
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(238, 130, 238, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(238, 130, 238, 1);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Player Names</h2>
+    <form id="playerNamesForm" onsubmit="storeNames(event)">
+      
+      <input type="text" id="player1" placeholder="Player 1 Name" required>
+      
+      
+      <input type="text" id="player2" placeholder="Player 2 Name" required>
+      
+      <input type="submit" value="Submit">
+    </form>
+
+  
+
+   <script>
+      function storeNames(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Access the input field values
+        var player1Name = document.getElementById("player1").value;
+        var player2Name = document.getElementById("player2").value;
+
+        // Store player names in local storage
+        localStorage.setItem("player1", player1Name);
+        localStorage.setItem("player2", player2Name);
+
+        // Redirect to the index.html page
+        window.location.href = "index.html";
+      }
+    </script>
+  </div>
+</body>
+</html>
