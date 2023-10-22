@@ -10,7 +10,7 @@
 
 
 body {
-  background-image: linear-gradient(to right, rgb(15, 56, 67), rgb(28, 6, 91),rgb(54, 20, 62));
+  background-color:  rgb(24, 15, 27);
   font-family: Arial, sans-serif;
 }
 
@@ -21,8 +21,8 @@ body {
   margin: 0 auto;
   padding: 30px;
   background-color: #000000;
-  border-radius: 10px;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  box-shadow: 2px 2px 40px rgb(255, 0, 187);
   
 }
 
@@ -80,7 +80,7 @@ input[type="text"] {
 }
 input[type = "text"]:focus{
   outline: none;
-  box-shadow: 1px 1px 20px rgb(255, 0, 217) ;
+  box-shadow: 1px 1px 10px rgb(255, 0, 217) ;
 }
 ::placeholder{
   color: rgb(202, 202, 202);
@@ -145,7 +145,7 @@ input[type="submit"]:hover {
         localStorage.setItem("player1", player1Name);
         localStorage.setItem("player2", player2Name);
 
-        // Redirect to the index.html page
+        // Redirect to the tictac.html page
         window.location.href = "tictac.html";
       }
     </script>
